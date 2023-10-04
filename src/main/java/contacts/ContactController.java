@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
-import java.util.List;
 
 @Controller
 @RequestMapping("/")
@@ -27,8 +26,8 @@ public class ContactController {
     }
 
     @ModelAttribute(name = "contacts")
-    public List<Contact> contacts() {
-        List<Contact> contacts = contactRepo.findAll();
+    public Iterable<Contact> contacts() {
+        Iterable<Contact> contacts = contactRepo.findAll();
         return contacts;
     }
 

@@ -1,9 +1,6 @@
 package contacts;
 
-import java.util.List;
+import org.springframework.data.repository.CrudRepository;
 
-public interface ContactRepository {
-    List<Contact> findAll();
-
-    void save(Contact contact);
+public interface ContactRepository extends CrudRepository<Contact, Long> {
 }
