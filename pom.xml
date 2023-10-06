@@ -39,11 +39,11 @@
     </dependency>
     <!-- end::springDataMongoDb[] -->
     <!-- tag::flapDoodle[] -->
-    <dependency>
-      <groupId>de.flapdoodle.embed</groupId>
-      <artifactId>de.flapdoodle.embed.mongo</artifactId>
-      <!-- <scope>test</scope> -->
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>de.flapdoodle.embed</groupId>-->
+<!--      <artifactId>de.flapdoodle.embed.mongo</artifactId>-->
+<!--      &lt;!&ndash; <scope>test</scope> &ndash;&gt;-->
+<!--    </dependency>-->
     <!-- end::flapDoodle[] -->
     <dependency>
       <groupId>org.projectlombok</groupId>
