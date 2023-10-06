@@ -1,19 +1,21 @@
 package contacts;
 
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.validation.constraints.*;
 
 @Data
-@Entity
+@Document
+@AllArgsConstructor
+@NoArgsConstructor(access= AccessLevel.PUBLIC, force=true)
 public class Contact {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private String id;
 
     @NotNull
     @Size(min = 1, message = "名字必须至少1个字符")
@@ -26,7 +28,7 @@ public class Contact {
     @Pattern(regexp = "^1([34578])\\d{9}$", message = "无效的手机号码")
     private String phoneNumber;
 
-    @NotBlank(message="不能为空")
+    @NotBlank(message = "不能为空")
     @Email
     private String emailAddress;
 
