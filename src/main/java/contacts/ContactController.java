@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/add")
 public class ContactController {
 
     private ContactRepository contactRepo;
@@ -42,7 +42,7 @@ public class ContactController {
             return "home";
         } else {
             contactRepo.save(contact);
-            return "redirect:/";
+            return "redirect:/add";
         }
     }
 }

@@ -8,7 +8,7 @@
 
 <body>
 <h2>Spring Boot Contacts</h2>
-<form method="POST" th:object="${contact}">
+<form method="POST" th:action="@{/add}" th:object="${contact}">
     <label for="firstName"> First Name:</label>
     <input type="text" th:field="*{firstName}"/>
     <span class="validationError"
